@@ -1,346 +1,599 @@
-// ==========================================
-// REXIO Portfolio - Main JavaScript
-// ==========================================
-
+/* ==========================================
+REXIO Portfolio
+Main JavaScript
+========================================== */
 
 // ==========================================
 // Smooth Navigation
 // ==========================================
 
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener("click", (event) => {
-    const targetId = link.getAttribute("href");
+document
+.querySelectorAll('a[href^="#"]')
+.forEach((link) => {
 
-    if (!targetId || targetId === "#") {
+```
+link.addEventListener(
+  "click",
+  (event) => {
+
+    const targetId =
+      link.getAttribute("href");
+
+
+    if (
+      !targetId ||
+      targetId === "#"
+    ) {
       return;
     }
 
-    const target = document.querySelector(targetId);
+
+    const target =
+      document.querySelector(targetId);
+
 
     if (!target) {
       return;
     }
 
+
     event.preventDefault();
+
 
     target.scrollIntoView({
       behavior: "smooth",
       block: "start"
     });
-  });
-});
 
+  }
+);
+```
+
+});
 
 // ==========================================
 // Contact Form
 // ==========================================
 
-const contactForm = document.getElementById("contactForm");
-const contactMessage = document.getElementById("contactMessage");
+const contactForm =
+document.getElementById(
+"contactForm"
+);
+
+const contactMessage =
+document.getElementById(
+"contactMessage"
+);
 
 if (contactForm) {
-  contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const project = document.getElementById("project").value;
-    const message = document.getElementById("message").value.trim();
+contactForm.addEventListener(
+"submit",
+(event) => {
 
-    if (!name || !email || !project || !message) {
-      contactMessage.style.display = "block";
+```
+  event.preventDefault();
 
-      contactMessage.textContent =
-        "يرجى تعبئة جميع الحقول المطلوبة.";
 
-      contactMessage.style.color = "#fca5a5";
+  const name =
+    document
+      .getElementById("name")
+      .value
+      .trim();
 
-      contactMessage.style.background =
-        "rgba(239, 68, 68, 0.08)";
 
-      contactMessage.style.borderColor =
-        "rgba(239, 68, 68, 0.15)";
+  const email =
+    document
+      .getElementById("email")
+      .value
+      .trim();
 
-      return;
-    }
 
-    /*
-      حاليًا النموذج يعمل محليًا فقط.
+  const project =
+    document
+      .getElementById("project")
+      .value;
 
-      لاحقًا سنربطه بخدمة Backend آمنة
-      لإرسال البيانات إلى البريد أو قاعدة بيانات.
-    */
 
-    contactMessage.style.display = "block";
+  const message =
+    document
+      .getElementById("message")
+      .value
+      .trim();
+
+
+  // Validate form
+
+  if (
+    !name ||
+    !email ||
+    !project ||
+    !message
+  ) {
+
+    contactMessage.style.display =
+      "block";
+
 
     contactMessage.textContent =
-      `شكرًا ${name} 👋 تم استلام طلبك وسنتواصل معك قريبًا.`;
+      "يرجى تعبئة جميع الحقول المطلوبة.";
 
-    contactMessage.style.color = "#86efac";
 
-    contactMessage.style.background =
-      "rgba(34, 197, 94, 0.08)";
+    return;
 
-    contactMessage.style.borderColor =
-      "rgba(34, 197, 94, 0.15)";
+  }
 
-    contactForm.reset();
-  });
+
+  // Project names
+
+  const projectNames = {
+
+    website:
+      "موقع إلكتروني",
+
+    landing:
+      "Landing Page",
+
+    ai:
+      "مشروع يعتمد على الذكاء الاصطناعي",
+
+    other:
+      "مشروع آخر"
+
+  };
+
+
+  const projectName =
+    projectNames[project] ||
+    project;
+
+
+  // Email subject
+
+  const subject =
+    `طلب مشروع جديد من ${name}`;
+
+
+  // Email body
+
+  const emailBody =
+```
+
+`مرحبًا REXIO،
+
+أرغب في التواصل معك بخصوص مشروع جديد.
+
+الاسم:
+${name}
+
+البريد الإلكتروني:
+${email}
+
+نوع المشروع:
+${projectName}
+
+تفاصيل الفكرة:
+${message}
+
+---
+
+تم إرسال هذه الرسالة من نموذج التواصل في موقع REXIO.`;
+
+```
+  // Create mailto link
+
+  const mailtoLink =
+    `mailto:rexiopro63@gmail.com` +
+    `?subject=${encodeURIComponent(subject)}` +
+    `&body=${encodeURIComponent(emailBody)}`;
+
+
+  // Open email application
+
+  window.location.href =
+    mailtoLink;
+
+
+  // Confirmation message
+
+  contactMessage.style.display =
+    "block";
+
+
+  contactMessage.textContent =
+    "سيتم فتح تطبيق البريد لإرسال فكرتك إلى REXIO.";
+
+}
+```
+
+);
+
 }
 
+// ==========================================
+// AI Chat Elements
+// ==========================================
+
+const chatButton =
+document.getElementById(
+"chatButton"
+);
+
+const chatWindow =
+document.getElementById(
+"chatWindow"
+);
+
+const closeChat =
+document.getElementById(
+"closeChat"
+);
+
+const chatForm =
+document.getElementById(
+"chatForm"
+);
+
+const chatInput =
+document.getElementById(
+"chatInput"
+);
+
+const chatMessages =
+document.getElementById(
+"chatMessages"
+);
 
 // ==========================================
-// AI Chat
+// Open AI Chat
 // ==========================================
 
-const chatButton = document.getElementById("chatButton");
-const chatWindow = document.getElementById("chatWindow");
-const closeChat = document.getElementById("closeChat");
-
-const chatForm = document.getElementById("chatForm");
-const chatInput = document.getElementById("chatInput");
-const chatMessages = document.getElementById("chatMessages");
-
-
-// Open Chat
 if (chatButton) {
-  chatButton.addEventListener("click", () => {
-    chatWindow.classList.remove("hidden");
 
-    chatButton.classList.add("hidden");
+chatButton.addEventListener(
+"click",
+() => {
 
-    setTimeout(() => {
-      chatInput.focus();
-    }, 100);
-  });
-}
-
-
-// Close Chat
-if (closeChat) {
-  closeChat.addEventListener("click", () => {
-    chatWindow.classList.add("hidden");
-
-    chatButton.classList.remove("hidden");
-  });
-}
-
-
-// ==========================================
-// Add Message
-// ==========================================
-
-function addMessage(text, type) {
-  const message = document.createElement("div");
-
-  message.classList.add(
-    "message",
-    type
+```
+  chatWindow.classList.remove(
+    "hidden"
   );
 
-  message.textContent = text;
 
-  chatMessages.appendChild(message);
+  chatButton.classList.add(
+    "hidden"
+  );
 
-  chatMessages.scrollTop =
-    chatMessages.scrollHeight;
 
-  return message;
+  setTimeout(
+    () => {
+
+      if (chatInput) {
+        chatInput.focus();
+      }
+
+    },
+    100
+  );
+
+}
+```
+
+);
+
 }
 
+// ==========================================
+// Close AI Chat
+// ==========================================
+
+if (closeChat) {
+
+closeChat.addEventListener(
+"click",
+() => {
+
+```
+  chatWindow.classList.add(
+    "hidden"
+  );
+
+
+  chatButton.classList.remove(
+    "hidden"
+  );
+
+}
+```
+
+);
+
+}
+
+// ==========================================
+// Add Chat Message
+// ==========================================
+
+function addMessage(
+text,
+type
+) {
+
+const message =
+document.createElement(
+"div"
+);
+
+message.classList.add(
+"message",
+type
+);
+
+message.textContent =
+text;
+
+chatMessages.appendChild(
+message
+);
+
+chatMessages.scrollTop =
+chatMessages.scrollHeight;
+
+return message;
+
+}
 
 // ==========================================
 // Loading Message
 // ==========================================
 
 function addLoadingMessage() {
-  const message = document.createElement("div");
 
-  message.classList.add(
-    "message",
-    "assistant",
-    "loading"
-  );
+const message =
+document.createElement(
+"div"
+);
 
-  message.textContent =
-    "جاري التفكير...";
+message.classList.add(
+"message",
+"assistant",
+"loading"
+);
 
-  chatMessages.appendChild(message);
+message.textContent =
+"جاري التفكير...";
 
-  chatMessages.scrollTop =
-    chatMessages.scrollHeight;
+chatMessages.appendChild(
+message
+);
 
-  return message;
+chatMessages.scrollTop =
+chatMessages.scrollHeight;
+
+return message;
+
 }
-
 
 // ==========================================
 // AI Request
 // ==========================================
 
-async function askAI(userMessage) {
+async function askAI(
+userMessage
+) {
 
-  /*
-    مهم جدًا:
+/*
+لا نضع مفتاح Groq هنا.
 
-    لا نضع GROQ_API_KEY هنا.
+```
+هذا الملف يصل إلى متصفح الزائر،
+وبالتالي وضع API Key داخله سيكشف المفتاح.
 
-    هذا الملف يعمل داخل متصفح الزائر،
-    وأي مفتاح API يوضع هنا يمكن كشفه.
+الطلب يذهب إلى:
 
-    لاحقًا سنجعل الطلب يذهب إلى Backend
-    آمن يحتوي على مفتاح Groq داخل .env.
-  */
+/api/chat
 
-  const response = await fetch(
-    "/api/chat",
-    {
-      method: "POST",
+وسنربطه لاحقًا بالـ Backend
+الذي يحتوي على GROQ_API_KEY
+داخل متغير البيئة .env.
+```
 
-      headers: {
-        "Content-Type": "application/json"
-      },
+*/
 
-      body: JSON.stringify({
-        message: userMessage
-      })
-    }
-  );
+const response =
+await fetch(
+"/api/chat",
+{
+
+```
+    method: "POST",
 
 
-  if (!response.ok) {
-    throw new Error(
-      "حدث خطأ أثناء الاتصال بالخادم."
-    );
+    headers: {
+
+      "Content-Type":
+        "application/json"
+
+    },
+
+
+    body: JSON.stringify({
+
+      message:
+        userMessage
+
+    })
+
   }
+);
+```
 
+if (!response.ok) {
 
-  const data = await response.json();
+```
+throw new Error(
+  "حدث خطأ أثناء الاتصال بالخادم."
+);
+```
 
-  return data.reply;
 }
 
+const data =
+await response.json();
+
+return data.reply;
+
+}
 
 // ==========================================
-// Chat Submit
+// AI Chat Submit
 // ==========================================
 
 if (chatForm) {
 
-  chatForm.addEventListener(
-    "submit",
-    async (event) => {
+chatForm.addEventListener(
+"submit",
+async (event) => {
 
-      event.preventDefault();
-
-
-      const userMessage =
-        chatInput.value.trim();
+```
+  event.preventDefault();
 
 
-      if (!userMessage) {
-        return;
-      }
+  const userMessage =
+    chatInput.value.trim();
 
 
-      // Display user message
-      addMessage(
-        userMessage,
-        "user"
+  if (!userMessage) {
+    return;
+  }
+
+
+  // Add user message
+
+  addMessage(
+    userMessage,
+    "user"
+  );
+
+
+  // Clear input
+
+  chatInput.value =
+    "";
+
+
+  // Disable controls
+
+  chatInput.disabled =
+    true;
+
+
+  const submitButton =
+    chatForm.querySelector(
+      "button"
+    );
+
+
+  submitButton.disabled =
+    true;
+
+
+  // Loading
+
+  const loadingMessage =
+    addLoadingMessage();
+
+
+  try {
+
+    const reply =
+      await askAI(
+        userMessage
       );
 
 
-      // Clear input
-      chatInput.value = "";
+    loadingMessage.remove();
 
 
-      // Disable input
-      chatInput.disabled = true;
+    addMessage(
+      reply,
+      "assistant"
+    );
+
+  }
+
+  catch (error) {
+
+    console.error(
+      "AI Error:",
+      error
+    );
 
 
-      const submitButton =
-        chatForm.querySelector("button");
-
-      submitButton.disabled = true;
+    loadingMessage.remove();
 
 
-      // Loading message
-      const loadingMessage =
-        addLoadingMessage();
+    addMessage(
+      "عذرًا، المساعد الذكي غير متاح حاليًا. حاول مرة أخرى لاحقًا.",
+      "assistant"
+    );
+
+  }
+
+  finally {
+
+    chatInput.disabled =
+      false;
 
 
-      try {
-
-        const reply =
-          await askAI(userMessage);
+    submitButton.disabled =
+      false;
 
 
-        loadingMessage.remove();
+    chatInput.focus();
 
+  }
 
-        addMessage(
-          reply,
-          "assistant"
-        );
+}
+```
 
-      }
-
-      catch (error) {
-
-        console.error(
-          "AI Error:",
-          error
-        );
-
-
-        loadingMessage.remove();
-
-
-        addMessage(
-          "عذرًا، حدث خطأ في الاتصال بالمساعد الذكي. حاول مرة أخرى.",
-          "assistant"
-        );
-
-      }
-
-      finally {
-
-        chatInput.disabled = false;
-
-        submitButton.disabled = false;
-
-        chatInput.focus();
-
-      }
-
-    }
-  );
+);
 
 }
 
-
 // ==========================================
-// Scroll Reveal
+// Scroll Reveal Animation
 // ==========================================
 
 const revealElements =
-  document.querySelectorAll(
-    ".service-card, .project-card, .section-heading"
-  );
+document.querySelectorAll(
+".service-card, .project-card, .section-heading"
+);
 
+if (
+"IntersectionObserver"
+in window
+) {
 
 const revealObserver =
-  new IntersectionObserver(
-    (entries) => {
+new IntersectionObserver(
+(entries) => {
 
-      entries.forEach((entry) => {
+```
+    entries.forEach(
+      (entry) => {
 
-        if (entry.isIntersecting) {
+        if (
+          entry.isIntersecting
+        ) {
 
-          entry.target.style.opacity = "1";
+          entry.target.style.opacity =
+            "1";
+
 
           entry.target.style.transform =
             "translateY(0)";
+
 
           revealObserver.unobserve(
             entry.target
@@ -348,26 +601,39 @@ const revealObserver =
 
         }
 
-      });
+      }
+    );
 
-    },
+  },
+  {
+    threshold: 0.12
+  }
+);
+```
 
-    {
-      threshold: 0.12
-    }
-  );
+revealElements.forEach(
+(element) => {
 
+```
+  element.style.opacity =
+    "0";
 
-revealElements.forEach((element) => {
-
-  element.style.opacity = "0";
 
   element.style.transform =
     "translateY(25px)";
 
+
   element.style.transition =
     "opacity 0.7s ease, transform 0.7s ease";
 
-  revealObserver.observe(element);
 
-});
+  revealObserver.observe(
+    element
+  );
+
+}
+```
+
+);
+
+}
