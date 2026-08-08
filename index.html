@@ -1,28 +1,22 @@
+```html
 <!DOCTYPE html>
-
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
 
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
->
+  <meta
+    name="description"
+    content="REXIO - تطوير مواقع وحلول ذكاء اصطناعي"
+  >
 
-<meta
-name="description"
-content="REXIO - تطوير مواقع وحلول ذكاء اصطناعي وتجارب رقمية حديثة."
+  <meta name="theme-color" content="#08080c">
 
->
-
-<meta
-name="theme-color"
-content="#08080c"
-
->
-
-  <title>REXIO — Web & AI Developer</title>
+  <title>REXIO | Web & AI Developer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,972 +41,853 @@ content="#08080c"
 
   <header class="navbar" id="navbar">
 
-```
-<a href="#home" class="logo">
-  REXIO<span>.</span>
-</a>
+    <a href="#home" class="logo">
+      REXIO<span>.</span>
+    </a>
 
-<nav class="nav-links" id="navLinks">
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">الرئيسية</a>
+      <a href="#services">الخدمات</a>
+      <a href="#projects">المشاريع</a>
+      <a href="#about">عني</a>
+      <a href="#contact">تواصل معي</a>
+    </nav>
 
-  <a href="#home">الرئيسية</a>
-  <a href="#services">الخدمات</a>
-  <a href="#projects">المشاريع</a>
-  <a href="#about">عني</a>
-  <a href="#contact">تواصل معي</a>
+    <a href="#contact" class="nav-button">
+      ابدأ مشروعك
+      <span>←</span>
+    </a>
 
-</nav>
-
-<a href="#contact" class="nav-button">
-  ابدأ مشروعك
-  <span>←</span>
-</a>
-
-<button
-  class="menu-toggle"
-  id="menuToggle"
-  aria-label="فتح القائمة"
-  aria-expanded="false"
->
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
-```
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="فتح القائمة"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
   </header>
 
+
   <main>
 
-```
-<!-- =========================
-     Hero
-========================== -->
+    <!-- =========================
+         Hero
+    ========================== -->
 
-<section class="hero section" id="home">
+    <section class="hero section" id="home">
 
-  <div class="hero-content reveal">
+      <div class="hero-content reveal">
 
-    <div class="status-badge">
-      <i></i>
-      متاح لمشاريع جديدة
-    </div>
-
-    <h1>
-      أحوّل أفكارك إلى
-      <span>تجارب رقمية</span>
-      مذهلة.
-    </h1>
-
-    <p class="hero-description">
-      أطور مواقع عصرية وسريعة، وأدمج الذكاء الاصطناعي
-      لبناء حلول رقمية تساعد المشاريع على الظهور بشكل
-      احترافي والوصول إلى عملائها بشكل أفضل.
-    </p>
-
-    <div class="hero-buttons">
-
-      <a
-        href="#projects"
-        class="btn btn-primary"
-      >
-        شاهد أعمالي
-        <span>←</span>
-      </a>
-
-      <a
-        href="#contact"
-        class="btn btn-secondary"
-      >
-        تواصل معي
-      </a>
-
-    </div>
-
-    <div class="hero-stats">
-
-      <div>
-        <strong>WEB</strong>
-        <span>تطوير مواقع</span>
-      </div>
-
-      <div>
-        <strong>AI</strong>
-        <span>حلول ذكية</span>
-      </div>
-
-      <div>
-        <strong>24/7</strong>
-        <span>تواصل ودعم</span>
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- Hero Visual -->
-
-  <div class="hero-visual reveal delay-1">
-
-    <div class="visual-orbit orbit-1"></div>
-    <div class="visual-orbit orbit-2"></div>
-
-    <div class="glow"></div>
-
-
-    <div class="code-window">
-
-      <div class="window-header">
-
-        <div class="window-dots">
+        <div class="status-badge">
           <i></i>
-          <i></i>
-          <i></i>
+          متاح لمشاريع جديدة
         </div>
 
-        <div class="window-title">
-          rexio.dev
+        <h1>
+          أحوّل أفكارك إلى
+          <span>تجارب رقمية</span>
+          مذهلة.
+        </h1>
+
+        <p class="hero-description">
+          أطور مواقع عصرية وسريعة، وأدمج الذكاء الاصطناعي
+          لبناء حلول رقمية تساعد المشاريع على الظهور بشكل
+          احترافي والوصول إلى عملائها بشكل أفضل.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#projects" class="btn btn-primary">
+            شاهد أعمالي
+            <span>←</span>
+          </a>
+
+          <a href="#contact" class="btn btn-secondary">
+            تواصل معي
+          </a>
+
         </div>
 
-      </div>
-
-
-      <div class="code-content">
-
-        <div>
-          <span class="purple">const</span>
-          <span class="blue">developer</span>
-          =
-          <span class="green">{</span>
-        </div>
-
-        <div class="indent">
-          <span class="blue">name</span>:
-          <span class="orange">"REXIO"</span>,
-        </div>
-
-        <div class="indent">
-          <span class="blue">skills</span>:
-          <span class="green">["Web", "AI"]</span>,
-        </div>
-
-        <div class="indent">
-          <span class="blue">focus</span>:
-          <span class="orange">"Results"</span>,
-        </div>
-
-        <div>
-          <span class="green">}</span>
-        </div>
-
-        <br>
-
-        <div>
-          <span class="purple">function</span>
-          <span class="blue">createFuture</span>()
-          <span class="green">{</span>
-        </div>
-
-        <div class="indent">
-          <span class="purple">return</span>
-          <span class="orange">"Let's build it."</span>
-        </div>
-
-        <div>
-          <span class="green">}</span>
-        </div>
-
-        <div class="cursor-line">
-          <span class="cursor"></span>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <div class="floating-card card-ai">
-
-      <span class="floating-icon">
-        ✦
-      </span>
-
-      <div>
-        <strong>AI Ready</strong>
-        <small>حلول ذكية</small>
-      </div>
-
-    </div>
-
-
-    <div class="floating-card card-web">
-
-      <span class="floating-icon">
-        ◇
-      </span>
-
-      <div>
-        <strong>Modern Web</strong>
-        <small>سريع ومتجاوب</small>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     Services
-========================== -->
-
-<section
-  class="services section"
-  id="services"
->
-
-  <div class="section-heading reveal">
-
-    <span class="section-label">
-      خدماتي
-    </span>
-
-    <h2>
-      ماذا يمكنني أن
-      <span>أبني لك؟</span>
-    </h2>
-
-    <p>
-      حلول رقمية مصممة لتبدو احترافية،
-      تعمل بسرعة، وتخدم هدف مشروعك.
-    </p>
-
-  </div>
-
-
-  <div class="services-grid">
-
-    <article class="service-card reveal">
-
-      <div class="service-top">
-
-        <span class="service-number">
-          01
-        </span>
-
-        <span class="service-icon">
-          ◇
-        </span>
-
-      </div>
-
-      <h3>
-        تطوير المواقع
-      </h3>
-
-      <p>
-        مواقع احترافية ومتجاوبة تعمل على الهاتف
-        والكمبيوتر وتقدم تجربة استخدام ممتازة.
-      </p>
-
-      <div class="service-tags">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-      </div>
-
-    </article>
-
-
-    <article class="service-card reveal delay-1">
-
-      <div class="service-top">
-
-        <span class="service-number">
-          02
-        </span>
-
-        <span class="service-icon">
-          ✦
-        </span>
-
-      </div>
-
-      <h3>
-        الذكاء الاصطناعي
-      </h3>
-
-      <p>
-        دمج المساعدات الذكية وواجهات API داخل
-        المواقع لتحسين تجربة العملاء وأتمتة المهام.
-      </p>
-
-      <div class="service-tags">
-        <span>AI</span>
-        <span>APIs</span>
-        <span>Automation</span>
-      </div>
-
-    </article>
-
-
-    <article class="service-card reveal delay-2">
-
-      <div class="service-top">
-
-        <span class="service-number">
-          03
-        </span>
-
-        <span class="service-icon">
-          ↗
-        </span>
-
-      </div>
-
-      <h3>
-        Landing Pages
-      </h3>
-
-      <p>
-        صفحات هبوط جذابة تركز على الرسالة،
-        سرعة التحميل، وتحويل الزوار إلى عملاء محتملين.
-      </p>
-
-      <div class="service-tags">
-        <span>UI/UX</span>
-        <span>Responsive</span>
-        <span>Conversion</span>
-      </div>
-
-    </article>
-
-
-    <article class="service-card reveal delay-3">
-
-      <div class="service-top">
-
-        <span class="service-number">
-          04
-        </span>
-
-        <span class="service-icon">
-          ⚡
-        </span>
-
-      </div>
-
-      <h3>
-        تحسين المواقع
-      </h3>
-
-      <p>
-        تحسين الواجهة والأداء وتجربة المستخدم
-        وجعل الموقع أكثر وضوحًا وتوافقًا مع الأجهزة.
-      </p>
-
-      <div class="service-tags">
-        <span>Speed</span>
-        <span>SEO</span>
-        <span>UX</span>
-      </div>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     Projects
-========================== -->
-
-<section
-  class="projects section"
-  id="projects"
->
-
-  <div class="section-heading reveal">
-
-    <span class="section-label">
-      أعمالي
-    </span>
-
-    <h2>
-      أفكار تتحول إلى
-      <span>مشاريع.</span>
-    </h2>
-
-    <p>
-      مجموعة من التجارب والأفكار التي أعمل على تطويرها.
-      اضغط على أي مشروع لمشاهدة فكرته وتجربته.
-    </p>
-
-  </div>
-
-
-  <div class="projects-grid">
-
-
-    <!-- Ecommerce -->
-
-    <article
-      class="project-card reveal"
-      data-project="ecommerce"
-      tabindex="0"
-      role="button"
-    >
-
-      <div class="project-preview preview-one">
-
-        <div class="browser">
-
-          <div class="browser-header">
-            <i></i>
-            <i></i>
-            <i></i>
+        <div class="hero-stats">
+
+          <div>
+            <strong>WEB</strong>
+            <span>تطوير مواقع</span>
           </div>
 
-          <div class="mini-shop">
+          <div>
+            <strong>AI</strong>
+            <span>حلول ذكية</span>
+          </div>
 
-            <div class="mini-nav"></div>
-            <div class="mini-hero"></div>
+          <div>
+            <strong>24/7</strong>
+            <span>تواصل ودعم</span>
+          </div>
 
-            <div class="mini-products">
+        </div>
+
+      </div>
+
+
+      <!-- Hero Visual -->
+
+      <div class="hero-visual reveal delay-1">
+
+        <div class="visual-orbit orbit-1"></div>
+        <div class="visual-orbit orbit-2"></div>
+        <div class="glow"></div>
+
+        <div class="code-window">
+
+          <div class="window-header">
+
+            <div class="window-dots">
               <i></i>
               <i></i>
               <i></i>
+            </div>
+
+            <div class="window-title">
+              rexio.dev
+            </div>
+
+          </div>
+
+          <div class="code-content">
+
+            <div>
+              <span class="purple">const</span>
+              <span class="blue">developer</span>
+              =
+              <span class="green">{</span>
+            </div>
+
+            <div class="indent">
+              <span class="blue">name</span>:
+              <span class="orange">"REXIO"</span>,
+            </div>
+
+            <div class="indent">
+              <span class="blue">skills</span>:
+              <span class="green">["Web", "AI"]</span>,
+            </div>
+
+            <div class="indent">
+              <span class="blue">focus</span>:
+              <span class="orange">"Results"</span>,
+            </div>
+
+            <div>
+              <span class="green">}</span>
+            </div>
+
+            <br>
+
+            <div>
+              <span class="purple">function</span>
+              <span class="blue">createFuture</span>()
+              <span class="green">{</span>
+            </div>
+
+            <div class="indent">
+              <span class="purple">return</span>
+              <span class="orange">"Let's build it."</span>
+            </div>
+
+            <div>
+              <span class="green">}</span>
+            </div>
+
+            <div class="cursor-line">
+              <span class="cursor"></span>
             </div>
 
           </div>
 
         </div>
 
-        <span class="project-category">
-          Web · قيد التطوير
-        </span>
 
-      </div>
+        <div class="floating-card card-ai">
 
-
-      <div class="project-content">
-
-        <div class="project-title-row">
-
-          <h3>
-            متجر إلكتروني
-          </h3>
-
-          <span>
-            ↗
+          <span class="floating-icon">
+            ✦
           </span>
 
+          <div>
+            <strong>AI Ready</strong>
+            <small>حلول ذكية</small>
+          </div>
+
         </div>
 
-        <p>
-          واجهة متجر عصرية تركز على سهولة التصفح
-          وعرض المنتجات وتحسين تجربة الشراء.
-        </p>
 
-        <div class="project-tags">
-          <span>Web</span>
-          <span>UI/UX</span>
-          <span>Responsive</span>
-        </div>
+        <div class="floating-card card-web">
 
-        <div class="project-link">
-          استكشف الفكرة
-          <span>←</span>
+          <span class="floating-icon">
+            ◇
+          </span>
+
+          <div>
+            <strong>Modern Web</strong>
+            <small>سريع ومتجاوب</small>
+          </div>
+
         </div>
 
       </div>
 
-    </article>
+    </section>
 
 
-    <!-- Services -->
+    <!-- =========================
+         Services
+    ========================== -->
 
-    <article
-      class="project-card reveal delay-1"
-      data-project="services"
-      tabindex="0"
-      role="button"
-    >
+    <section class="services section" id="services">
 
-      <div class="project-preview preview-two">
+      <div class="section-heading reveal">
 
-        <div class="browser">
+        <span class="section-label">
+          خدماتي
+        </span>
 
-          <div class="browser-header">
-            <i></i>
-            <i></i>
-            <i></i>
+        <h2>
+          ماذا يمكنني أن
+          <span>أبني لك؟</span>
+        </h2>
+
+        <p>
+          حلول رقمية مصممة لتبدو احترافية،
+          تعمل بسرعة، وتخدم هدف مشروعك.
+        </p>
+
+      </div>
+
+
+      <div class="services-grid">
+
+        <article class="service-card reveal">
+
+          <div class="service-top">
+            <span class="service-number">01</span>
+            <span class="service-icon">◇</span>
           </div>
 
-          <div class="mini-dashboard">
+          <h3>تطوير المواقع</h3>
 
-            <div class="dash-sidebar"></div>
+          <p>
+            مواقع احترافية ومتجاوبة تعمل على الهاتف
+            والكمبيوتر وتقدم تجربة استخدام ممتازة.
+          </p>
 
-            <div class="dash-main">
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
+          <div class="service-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+
+        </article>
+
+
+        <article class="service-card reveal delay-1">
+
+          <div class="service-top">
+            <span class="service-number">02</span>
+            <span class="service-icon">✦</span>
+          </div>
+
+          <h3>الذكاء الاصطناعي</h3>
+
+          <p>
+            دمج المساعدات الذكية وواجهات API داخل المواقع
+            لتحسين تجربة العملاء وأتمتة المهام.
+          </p>
+
+          <div class="service-tags">
+            <span>AI</span>
+            <span>APIs</span>
+            <span>Automation</span>
+          </div>
+
+        </article>
+
+
+        <article class="service-card reveal delay-2">
+
+          <div class="service-top">
+            <span class="service-number">03</span>
+            <span class="service-icon">↗</span>
+          </div>
+
+          <h3>Landing Pages</h3>
+
+          <p>
+            صفحات هبوط جذابة تركز على الرسالة،
+            سرعة التحميل، وتحويل الزوار إلى عملاء.
+          </p>
+
+          <div class="service-tags">
+            <span>UI/UX</span>
+            <span>Responsive</span>
+            <span>Conversion</span>
+          </div>
+
+        </article>
+
+
+        <article class="service-card reveal delay-3">
+
+          <div class="service-top">
+            <span class="service-number">04</span>
+            <span class="service-icon">⚡</span>
+          </div>
+
+          <h3>تحسين المواقع</h3>
+
+          <p>
+            تحسين الواجهة والأداء وتجربة المستخدم
+            وجعل الموقع أكثر وضوحًا وتوافقًا مع الأجهزة.
+          </p>
+
+          <div class="service-tags">
+            <span>Speed</span>
+            <span>SEO</span>
+            <span>UX</span>
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         Projects
+    ========================== -->
+
+    <section class="projects section" id="projects">
+
+      <div class="section-heading reveal">
+
+        <span class="section-label">
+          أعمالي
+        </span>
+
+        <h2>
+          أفكار تتحول إلى
+          <span>مشاريع.</span>
+        </h2>
+
+        <p>
+          مجموعة من التجارب والأفكار التي أعمل على تطويرها.
+          اضغط على أي مشروع لمشاهدة مثال تفاعلي للفكرة.
+        </p>
+
+      </div>
+
+
+      <div class="projects-grid">
+
+
+        <!-- Ecommerce -->
+
+        <article
+          class="project-card reveal"
+          data-project="ecommerce"
+          tabindex="0"
+          role="button"
+        >
+
+          <div class="project-preview preview-one">
+
+            <div class="browser">
+
+              <div class="browser-header">
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+
+              <div class="mini-shop">
+
+                <div class="mini-nav"></div>
+
+                <div class="mini-hero"></div>
+
+                <div class="mini-products">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                </div>
+
+              </div>
+
+            </div>
+
+            <span class="project-category">
+              Web · قيد التطوير
+            </span>
+
+          </div>
+
+
+          <div class="project-content">
+
+            <div class="project-title-row">
+              <h3>متجر إلكتروني</h3>
+              <span>↗</span>
+            </div>
+
+            <p>
+              واجهة متجر عصرية تركز على سهولة التصفح
+              وعرض المنتجات وتحسين تجربة الشراء.
+            </p>
+
+            <div class="project-tags">
+              <span>Web</span>
+              <span>UI/UX</span>
+              <span>Responsive</span>
+            </div>
+
+            <div class="project-link">
+              مشاهدة المثال
+              <span>←</span>
             </div>
 
           </div>
 
-        </div>
+        </article>
 
-        <span class="project-category">
-          Platform · قيد التطوير
-        </span>
 
-      </div>
+        <!-- Services Platform -->
 
-
-      <div class="project-content">
-
-        <div class="project-title-row">
-
-          <h3>
-            منصة خدمات
-          </h3>
-
-          <span>
-            ↗
-          </span>
-
-        </div>
-
-        <p>
-          منصة رقمية لعرض الخدمات وتنظيم المعلومات
-          وتسهيل التواصل مع العملاء.
-        </p>
-
-        <div class="project-tags">
-          <span>Design</span>
-          <span>API</span>
-          <span>Web</span>
-        </div>
-
-        <div class="project-link">
-          استكشف الفكرة
-          <span>←</span>
-        </div>
-
-      </div>
-
-    </article>
-
-
-    <!-- AI -->
-
-    <article
-      class="project-card reveal delay-2"
-      data-project="ai"
-      tabindex="0"
-      role="button"
-    >
-
-      <div class="project-preview preview-three">
-
-        <div class="browser">
-
-          <div class="browser-header">
-            <i></i>
-            <i></i>
-            <i></i>
-          </div>
-
-          <div class="mini-chat">
-
-            <div class="chat-bubble"></div>
-            <div class="chat-bubble user"></div>
-            <div class="chat-bubble"></div>
-
-          </div>
-
-        </div>
-
-        <span class="project-category">
-          AI · تجربة ذكية
-        </span>
-
-      </div>
-
-
-      <div class="project-content">
-
-        <div class="project-title-row">
-
-          <h3>
-            AI Assistant
-          </h3>
-
-          <span>
-            ↗
-          </span>
-
-        </div>
-
-        <p>
-          مساعد ذكي يساعد زوار الموقع على فهم الخدمات
-          واختيار الحل المناسب وإرسال طلب.
-        </p>
-
-        <div class="project-tags">
-          <span>AI</span>
-          <span>API</span>
-          <span>Automation</span>
-        </div>
-
-        <div class="project-link">
-          استكشف الفكرة
-          <span>←</span>
-        </div>
-
-      </div>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     About
-========================== -->
-
-<section
-  class="about section"
-  id="about"
->
-
-  <div class="about-grid">
-
-    <div class="about-title reveal">
-
-      <span class="section-label">
-        عني
-      </span>
-
-      <h2>
-        أبني الأشياء
-        <span>بشغف.</span>
-      </h2>
-
-    </div>
-
-
-    <div class="about-text reveal delay-1">
-
-      <p>
-        أنا مطور مهتم ببناء التجارب الرقمية الحديثة
-        وتطوير المواقع التي تجمع بين التصميم الجميل
-        والأداء الجيد والوظائف الذكية.
-      </p>
-
-      <p>
-        أركز على فهم فكرة المشروع أولًا، ثم تحويلها
-        إلى تجربة رقمية واضحة وسهلة الاستخدام تساعد
-        على تحقيق الهدف المطلوب.
-      </p>
-
-      <div class="about-pills">
-        <span>Clean Code</span>
-        <span>Modern UI</span>
-        <span>AI Integration</span>
-        <span>Responsive</span>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     Process
-========================== -->
-
-<section class="process section">
-
-  <div class="section-heading reveal">
-
-    <span class="section-label">
-      طريقة العمل
-    </span>
-
-    <h2>
-      من الفكرة إلى
-      <span>النتيجة.</span>
-    </h2>
-
-  </div>
-
-
-  <div class="process-grid">
-
-    <div class="process-item reveal">
-
-      <b>01</b>
-
-      <h3>
-        أفهم الفكرة
-      </h3>
-
-      <p>
-        نحدد الهدف، الجمهور، والوظائف الأساسية المطلوبة.
-      </p>
-
-    </div>
-
-
-    <div class="process-item reveal delay-1">
-
-      <b>02</b>
-
-      <h3>
-        أبني الحل
-      </h3>
-
-      <p>
-        أحول الفكرة إلى واجهة وتجربة رقمية واضحة وسريعة.
-      </p>
-
-    </div>
-
-
-    <div class="process-item reveal delay-2">
-
-      <b>03</b>
-
-      <h3>
-        نطلق المشروع
-      </h3>
-
-      <p>
-        نراجع التفاصيل ونجهز المشروع ليكون جاهزًا للاستخدام.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     Contact
-========================== -->
-
-<section
-  class="contact section"
-  id="contact"
->
-
-  <div class="contact-grid">
-
-
-    <div class="contact-copy reveal">
-
-      <span class="section-label">
-        تواصل معي
-      </span>
-
-      <h2>
-        لديك فكرة؟
-        <span>لنبنها معًا.</span>
-      </h2>
-
-      <p>
-        أخبرني عن فكرتك، حتى لو كانت مجرد تصور أولي.
-        اكتب التفاصيل التي لديك وسأطلع عليها.
-      </p>
-
-
-      <div class="contact-links">
-
-        <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=rexiopro63@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="contact-link"
+        <article
+          class="project-card reveal delay-1"
+          data-project="services"
+          tabindex="0"
+          role="button"
         >
 
-          <span class="contact-icon">
-            ✉
-          </span>
+          <div class="project-preview preview-two">
 
-          <div>
-            <small>
-              البريد الإلكتروني
-            </small>
+            <div class="browser">
 
-            <strong>
-              rexiopro63@gmail.com
-            </strong>
+              <div class="browser-header">
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+
+              <div class="mini-dashboard">
+
+                <div class="dash-sidebar"></div>
+
+                <div class="dash-main">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                </div>
+
+              </div>
+
+            </div>
+
+            <span class="project-category">
+              Platform · قيد التطوير
+            </span>
+
           </div>
 
-          <span class="contact-arrow">
-            ↗
-          </span>
 
-        </a>
+          <div class="project-content">
+
+            <div class="project-title-row">
+              <h3>منصة خدمات</h3>
+              <span>↗</span>
+            </div>
+
+            <p>
+              منصة رقمية لعرض الخدمات وتنظيم المعلومات
+              وتسهيل التواصل مع العملاء.
+            </p>
+
+            <div class="project-tags">
+              <span>Design</span>
+              <span>API</span>
+              <span>Web</span>
+            </div>
+
+            <div class="project-link">
+              مشاهدة المثال
+              <span>←</span>
+            </div>
+
+          </div>
+
+        </article>
 
 
-        <a
-          href="https://github.com/rexio63"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="contact-link"
+        <!-- AI -->
+
+        <article
+          class="project-card reveal delay-2"
+          data-project="ai"
+          tabindex="0"
+          role="button"
         >
 
-          <span class="contact-icon">
-            ⌘
-          </span>
+          <div class="project-preview preview-three">
 
-          <div>
-            <small>
-              GitHub
-            </small>
+            <div class="browser">
 
-            <strong>
-              مشاهدة ملفي ومشاريعي
-            </strong>
+              <div class="browser-header">
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+
+              <div class="mini-chat">
+
+                <div class="chat-bubble"></div>
+
+                <div class="chat-bubble user"></div>
+
+                <div class="chat-bubble"></div>
+
+              </div>
+
+            </div>
+
+            <span class="project-category">
+              AI · تجربة ذكية
+            </span>
+
           </div>
 
-          <span class="contact-arrow">
-            ↗
-          </span>
 
-        </a>
+          <div class="project-content">
+
+            <div class="project-title-row">
+              <h3>AI Assistant</h3>
+              <span>↗</span>
+            </div>
+
+            <p>
+              مساعد ذكي يساعد زوار الموقع على فهم الخدمات
+              واختيار الحل المناسب وإرسال طلب.
+            </p>
+
+            <div class="project-tags">
+              <span>AI</span>
+              <span>API</span>
+              <span>Automation</span>
+            </div>
+
+            <div class="project-link">
+              مشاهدة المثال
+              <span>←</span>
+            </div>
+
+          </div>
+
+        </article>
 
       </div>
 
-    </div>
+    </section>
 
 
-    <form
-      id="contactForm"
-      class="contact-form reveal delay-1"
-    >
+    <!-- =========================
+         About
+    ========================== -->
 
-      <div class="form-row">
+    <section class="about section" id="about">
 
-        <div>
+      <div class="about-grid">
 
-          <label for="name">
-            الاسم
+        <div class="about-title reveal">
+
+          <span class="section-label">
+            عني
+          </span>
+
+          <h2>
+            أبني الأشياء
+            <span>بشغف.</span>
+          </h2>
+
+        </div>
+
+
+        <div class="about-text reveal delay-1">
+
+          <p>
+            أنا مطور مهتم ببناء التجارب الرقمية الحديثة
+            وتطوير المواقع التي تجمع بين التصميم الجميل
+            والأداء الجيد والوظائف الذكية.
+          </p>
+
+          <p>
+            أركز على فهم فكرة المشروع أولًا، ثم تحويلها
+            إلى تجربة رقمية واضحة وسهلة الاستخدام تساعد
+            على تحقيق الهدف المطلوب.
+          </p>
+
+          <div class="about-pills">
+            <span>Clean Code</span>
+            <span>Modern UI</span>
+            <span>AI Integration</span>
+            <span>Responsive</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         Process
+    ========================== -->
+
+    <section class="process section">
+
+      <div class="section-heading reveal">
+
+        <span class="section-label">
+          طريقة العمل
+        </span>
+
+        <h2>
+          من الفكرة إلى
+          <span>النتيجة.</span>
+        </h2>
+
+      </div>
+
+
+      <div class="process-grid">
+
+        <div class="process-item reveal">
+          <b>01</b>
+          <h3>أفهم الفكرة</h3>
+          <p>
+            نحدد الهدف، الجمهور، والوظائف الأساسية المطلوبة.
+          </p>
+        </div>
+
+        <div class="process-item reveal delay-1">
+          <b>02</b>
+          <h3>أبني الحل</h3>
+          <p>
+            أحول الفكرة إلى واجهة وتجربة رقمية واضحة وسريعة.
+          </p>
+        </div>
+
+        <div class="process-item reveal delay-2">
+          <b>03</b>
+          <h3>نطلق المشروع</h3>
+          <p>
+            نراجع التفاصيل ونجهز المشروع ليكون جاهزًا للاستخدام.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         Contact
+    ========================== -->
+
+    <section class="contact section" id="contact">
+
+      <div class="contact-grid">
+
+        <div class="contact-copy reveal">
+
+          <span class="section-label">
+            تواصل معي
+          </span>
+
+          <h2>
+            لديك فكرة؟
+            <span>لنبنها معًا.</span>
+          </h2>
+
+          <p>
+            أخبرني عن فكرتك، حتى لو كانت مجرد تصور أولي.
+            اكتب التفاصيل التي لديك وسأطلع عليها.
+          </p>
+
+
+          <div class="contact-links">
+
+            <a
+              href="mailto:rexiopro63@gmail.com"
+              class="contact-link"
+            >
+
+              <span class="contact-icon">
+                ✉
+              </span>
+
+              <div>
+                <small>البريد الإلكتروني</small>
+                <strong>rexiopro63@gmail.com</strong>
+              </div>
+
+              <span class="contact-arrow">
+                ↗
+              </span>
+
+            </a>
+
+
+            <a
+              href="https://github.com/rexio63"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link"
+            >
+
+              <span class="contact-icon">
+                ⌘
+              </span>
+
+              <div>
+                <small>GitHub</small>
+                <strong>مشاهدة ملفي ومشاريعي</strong>
+              </div>
+
+              <span class="contact-arrow">
+                ↗
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <form
+          id="contactForm"
+          class="contact-form reveal delay-1"
+        >
+
+          <div class="form-row">
+
+            <div>
+              <label for="name">الاسم</label>
+
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="اسمك"
+                required
+              >
+            </div>
+
+
+            <div>
+              <label for="email">
+                البريد الإلكتروني
+              </label>
+
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                required
+              >
+            </div>
+
+          </div>
+
+
+          <label for="project">
+            نوع المشروع
           </label>
 
-          <input
-            id="name"
-            name="name"
-            type="text"
-            placeholder="اسمك"
+          <select
+            id="project"
+            name="project"
             required
           >
 
-        </div>
+            <option value="">
+              اختر نوع المشروع
+            </option>
+
+            <option value="موقع إلكتروني">
+              موقع إلكتروني
+            </option>
+
+            <option value="Landing Page">
+              Landing Page
+            </option>
+
+            <option value="حل ذكاء اصطناعي">
+              حل ذكاء اصطناعي
+            </option>
+
+            <option value="متجر إلكتروني">
+              متجر إلكتروني
+            </option>
+
+            <option value="مشروع آخر">
+              مشروع آخر
+            </option>
+
+          </select>
 
 
-        <div>
-
-          <label for="email">
-            البريد الإلكتروني
+          <label for="message">
+            فكرة المشروع
           </label>
 
-          <input
-            id="email"
-            name="email"
-            type="email"
-            placeholder="you@example.com"
+          <textarea
+            id="message"
+            name="message"
+            rows="7"
+            placeholder="ما الذي تريد بناءه؟ وما الهدف من المشروع؟"
             required
-          >
+          ></textarea>
 
-        </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary full-width"
+          >
+            إرسال الفكرة عبر Gmail
+            <span>←</span>
+          </button>
+
+          <div
+            id="contactMessage"
+            class="form-message"
+          ></div>
+
+        </form>
 
       </div>
 
-
-      <label for="project">
-        نوع المشروع
-      </label>
-
-      <select
-        id="project"
-        name="project"
-        required
-      >
-
-        <option value="">
-          اختر نوع المشروع
-        </option>
-
-        <option value="موقع إلكتروني">
-          موقع إلكتروني
-        </option>
-
-        <option value="Landing Page">
-          Landing Page
-        </option>
-
-        <option value="حل ذكاء اصطناعي">
-          حل ذكاء اصطناعي
-        </option>
-
-        <option value="متجر إلكتروني">
-          متجر إلكتروني
-        </option>
-
-        <option value="مشروع آخر">
-          مشروع آخر
-        </option>
-
-      </select>
-
-
-      <label for="message">
-        فكرة المشروع
-      </label>
-
-      <textarea
-        id="message"
-        name="message"
-        rows="7"
-        placeholder="ما الذي تريد بناءه؟ وما الهدف من المشروع؟"
-        required
-      ></textarea>
-
-
-      <button
-        type="submit"
-        class="btn btn-primary full-width"
-      >
-        إرسال الفكرة عبر Gmail
-        <span>←</span>
-      </button>
-
-      <div
-        id="contactMessage"
-        class="form-message"
-        aria-live="polite"
-      ></div>
-
-    </form>
-
-  </div>
-
-</section>
-```
+    </section>
 
   </main>
+
 
   <!-- =========================
        Footer
@@ -1020,34 +895,23 @@ content="#08080c"
 
   <footer>
 
-```
-<div>
+    <div>
+      <a href="#home" class="logo">
+        REXIO<span>.</span>
+      </a>
 
-  <div class="logo">
-    REXIO<span>.</span>
-  </div>
+      <p>
+        Web · AI · Digital Solutions
+      </p>
+    </div>
 
-  <p>
-    © 2026 REXIO. جميع الحقوق محفوظة.
-  </p>
-
-</div>
-
-
-<div class="footer-right">
-
-  <span>
-    Built with passion & code.
-  </span>
-
-  <a href="#home">
-    العودة للأعلى ↑
-  </a>
-
-</div>
-```
+    <div class="footer-right">
+      <span>© 2026 REXIO</span>
+      <span>Built with passion & code.</span>
+    </div>
 
   </footer>
+
 
   <!-- =========================
        Project Modal
@@ -1059,215 +923,179 @@ content="#08080c"
     aria-hidden="true"
   >
 
-```
-<div
-  class="modal-backdrop"
-  data-close-modal
-></div>
+    <div
+      class="modal-backdrop"
+      data-close-modal
+    ></div>
+
+    <div
+      class="modal-box"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+
+      <button
+        class="modal-close"
+        id="modalClose"
+        aria-label="إغلاق"
+      >
+        ×
+      </button>
 
 
-<div
-  class="modal-box project-modal-box"
-  role="dialog"
-  aria-modal="true"
-  aria-labelledby="modalTitle"
->
-
-  <button
-    class="modal-close"
-    id="modalClose"
-    aria-label="إغلاق"
-  >
-    ×
-  </button>
+      <span
+        class="modal-label"
+        id="modalLabel"
+      >
+        Web · فكرة مشروع
+      </span>
 
 
-  <span
-    class="section-label"
-    id="modalLabel"
-  >
-    Web · Demo
-  </span>
+      <h2 id="modalTitle">
+        مشروع
+      </h2>
 
 
-  <h2 id="modalTitle">
-    المشروع
-  </h2>
+      <p id="modalDescription">
+        وصف المشروع
+      </p>
 
 
-  <p id="modalDescription">
-    وصف المشروع
-  </p>
+      <!-- Dynamic Project Preview -->
+
+      <div
+        class="modal-preview"
+        id="modalPreview"
+      ></div>
 
 
-  <div
-    class="modal-details"
-    id="modalDetails"
-  ></div>
+      <div
+        class="modal-details"
+        id="modalDetails"
+      ></div>
 
 
-  <div
-    class="project-demo"
-    id="projectDemo"
-  ></div>
+      <a
+        href="#contact"
+        class="btn btn-primary modal-cta"
+        id="modalCTA"
+      >
+        أريد تنفيذ فكرة مشابهة
+        <span>←</span>
+      </a>
 
-
-  <div class="modal-note">
-
-    <span>✦</span>
-
-    <p>
-      هذا نموذج تجريبي يوضح فكرة المشروع.
-      عند تنفيذ مشروع حقيقي يتم تخصيص التصميم
-      والوظائف حسب احتياجات العميل.
-    </p>
-
-  </div>
-
-
-  <a
-    href="#contact"
-    class="btn btn-primary full-width"
-    id="modalCTA"
-  >
-    أريد مشروعًا مشابهًا
-    <span>←</span>
-  </a>
-
-</div>
-```
+    </div>
 
   </div>
+
 
   <!-- =========================
        AI Chat
   ========================== -->
 
-<button
-id="chatButton"
-class="chat-button"
-aria-label="فتح المساعد الذكي"
-
->
-
-```
-✦
-```
-
+  <button
+    id="chatButton"
+    class="chat-button"
+    aria-label="فتح المساعد الذكي"
+  >
+    ✦
   </button>
 
-  <div
+
+  <section
     class="chat-panel"
     id="chatPanel"
     aria-hidden="true"
   >
 
-```
-<div class="chat-header">
+    <div class="chat-header">
 
-  <div class="chat-user">
+      <div class="chat-user">
 
-    <div class="chat-avatar">
-      AI
+        <div class="chat-avatar">
+          AI
+        </div>
+
+        <div>
+          <strong>المساعد الذكي</strong>
+          <span>● متصل الآن</span>
+        </div>
+
+      </div>
+
+
+      <button
+        id="closeChat"
+        class="close-chat"
+        aria-label="إغلاق"
+      >
+        ×
+      </button>
+
     </div>
 
-    <div>
 
-      <strong>
-        المساعد الذكي
-      </strong>
+    <div
+      class="chat-messages"
+      id="chatMessages"
+    >
 
-      <span>
-        ● متصل الآن
-      </span>
+      <div class="message assistant">
+        مرحبًا 👋
+        <br>
+        أنا المساعد الذكي في REXIO.
+        يمكنني مساعدتك في معرفة الخدمات
+        أو اختيار الحل المناسب لمشروعك.
+      </div>
+
+
+      <div class="quick-actions">
+
+        <button data-question="أريد إنشاء موقع لشركتي">
+          أريد موقعًا
+        </button>
+
+        <button data-question="أريد حلًا بالذكاء الاصطناعي">
+          أريد AI
+        </button>
+
+        <button data-question="أريد معرفة الخدمات">
+          الخدمات
+        </button>
+
+      </div>
 
     </div>
 
-  </div>
 
-
-  <button
-    id="closeChat"
-    class="close-chat"
-    aria-label="إغلاق المساعد"
-  >
-    ×
-  </button>
-
-</div>
-
-
-<div
-  class="chat-messages"
-  id="chatMessages"
->
-
-  <div class="message assistant">
-
-    مرحبًا 👋
-    <br>
-
-    أنا المساعد الذكي.
-    يمكنني مساعدتك في معرفة الخدمات
-    أو اختيار الحل المناسب لمشروعك.
-
-  </div>
-
-
-  <div class="quick-actions">
-
-    <button
-      type="button"
-      data-question="أريد إنشاء موقع لشركتي"
+    <form
+      class="chat-input"
+      id="chatForm"
     >
-      أريد موقعًا
-    </button>
 
-    <button
-      type="button"
-      data-question="أريد حلًا بالذكاء الاصطناعي"
-    >
-      أريد AI
-    </button>
+      <input
+        id="chatInput"
+        type="text"
+        placeholder="اكتب رسالتك..."
+        autocomplete="off"
+        required
+      >
 
-    <button
-      type="button"
-      data-question="أريد معرفة الخدمات"
-    >
-      الخدمات
-    </button>
+      <button
+        type="submit"
+        aria-label="إرسال"
+      >
+        ↑
+      </button>
 
-  </div>
+    </form>
 
-</div>
+  </section>
 
-
-<form
-  class="chat-input"
-  id="chatForm"
->
-
-  <input
-    id="chatInput"
-    type="text"
-    placeholder="اكتب رسالتك..."
-    autocomplete="off"
-    required
-  >
-
-  <button
-    type="submit"
-    aria-label="إرسال"
-  >
-    ↑
-  </button>
-
-</form>
-```
-
-  </div>
 
   <script src="script.js"></script>
 
 </body>
 </html>
+```
